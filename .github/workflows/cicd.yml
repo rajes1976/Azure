@@ -65,12 +65,12 @@ jobs:
     - name: Tag Docker Images
       run: |
         docker tag azure_webserver rajes1976/webserver:${{ steps.get_tag.outputs.tag }}
-        docker tag azure_backend rajes1976/backend:${{ steps.get_tag.outputs.tag }}
+        docker tag azure_apiendpoint rajes1976/apiendpoint:${{ steps.get_tag.outputs.tag }}
     
     - name: Push Docker Images to Docker Hub
       run: |
         docker push rajes1976/webserver:${{ steps.get_tag.outputs.tag }}
-        docker push rajes1976/backend:${{ steps.get_tag.outputs.tag }}
+        docker push rajes1976/apiendpoint:${{ steps.get_tag.outputs.tag }}
     
    
         

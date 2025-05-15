@@ -11,7 +11,7 @@ services:  #versie
       - ./reverse_proxy_conf/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - webserver
-      - backend
+      - apiendpoint
     networks:
       - proxy-tier
       
@@ -31,10 +31,10 @@ services:  #versie
       timeout: 10s
       retries: 3
       start_period: 5s
-  backend:
+  apiendpoint:
     #container_name: apiendpoint
     restart: always
-    image: rajes1976/backend:${RELEASE_VERSION}
+    image: rajes1976/apiendpoint:${RELEASE_VERSION}
     #build:
       #dockerfile: nodejs/Dockerfile
     environment:
