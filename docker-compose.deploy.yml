@@ -34,7 +34,7 @@ services:  #versie
   backend:
     #container_name: apiendpoint
     restart: always
-    image: rajes1976/nodejs:${RELEASE_VERSION}
+    image: rajes1976/backend:${RELEASE_VERSION}
     #build:
       #dockerfile: nodejs/Dockerfile
     environment:
